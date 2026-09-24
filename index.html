@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>KishanCafe | Authentic South Indian Café</title>
+
+<style>
+
+    /* =========================
+       GLOBAL STYLES
+    ========================== */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        background: #fff8e7;
+        color: #3b2114;
+        line-height: 1.6;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header {
+        width: 100%;
+        background: #651b12;
+        color: white;
+        padding: 18px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .logo {
+        color: #ffd166;
+        font-size: 30px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    nav {
+        display: flex;
+        gap: 25px;
+    }
+
+    nav a {
+        color: white;
+        font-size: 17px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #ffd166;
+    }
+
+    /* =========================
+       HERO / HOME
+    ========================== */
+
+    #home {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+
+        background:
+            linear-gradient(
+                rgba(50, 15, 5, 0.65),
+                rgba(50, 15, 5, 0.65)
+            ),
+            url("https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=1600&q=85");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-content {
+        max-width: 850px;
+        color: white;
+    }
+
+    .hero-small {
+        color: #ffd166;
+        font-size: 20px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 70px;
+        color: #fff3c4;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #d88919;
+        color: white;
+        padding: 14px 32px;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #ad650d;
+        transform: translateY(-3px);
+    }
+
+    /* =========================
+       GENERAL SECTION
+    ========================== */
+
+    section {
+        scroll-margin-top: 80px;
+    }
+
+    .section {
+        padding: 80px 8%;
+    }
+
+    .section-title {
+        text-align: center;
+        color: #7b1e16;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        max-width: 750px;
+        margin: 0 auto 45px;
+        color: #654b3b;
+    }
+
+    /* =========================
+       HOME SPECIALITIES
+    ========================== */
+
+    .specials {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .special-card {
+        background: white;
+        padding: 35px 25px;
+        text-align: center;
+        border-radius: 15px;
+        border-top: 5px solid #d88919;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .special-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .food-icon {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+
+    .special-card h3 {
+        color: #7b1e16;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    #about {
+        background: #fff1cf;
+    }
+
+    .about-content {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .about-content h3 {
+        color: #7b1e16;
+        font-size: 30px;
+        margin: 25px 0 10px;
+    }
+
+    .about-content p {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+
+    .values {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 45px;
+    }
+
+    .value-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .value-icon {
+        font-size: 50px;
+    }
+
+    .value-card h3 {
+        color: #7b1e16;
+        margin: 10px 0;
+    }
+
+    /* =========================
+       MENU
+    ========================== */
+
+    #menu {
+        background: #fff8e7;
+    }
+
+    .menu-container {
+        max-width: 1050px;
+        margin: auto;
+    }
+
+    .menu-category {
+        margin-bottom: 50px;
+    }
+
+    .category-title {
+        color: #7b1e16;
+        font-size: 30px;
+        border-bottom: 3px solid #d88919;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .menu-item {
+        background: white;
+        padding: 20px 25px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        transition: 0.2s;
+    }
+
+    .menu-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    }
+
+    .menu-info h3 {
+        color: #542015;
+        margin-bottom: 5px;
+    }
+
+    .menu-info p {
+        color: #765b4b;
+    }
+
+    .price {
+        color: #b45f09;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 20px;
+        white-space: nowrap;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+        background: #7b1e16;
+        color: white;
+        text-align: center;
+        padding: 70px 20px;
+    }
+
+    .cta h2 {
+        color: #ffd166;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .cta p {
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    #contact {
+        background: #fff1cf;
+    }
+
+    .contact-container {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .contact-box {
+        background: white;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-box h2 {
+        color: #7b1e16;
+        margin-bottom: 25px;
+    }
+
+    .contact-info {
+        margin-bottom: 20px;
+    }
+
+    .contact-info h3 {
+        color: #b45f09;
+        margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        font-family: inherit;
+        font-size: 15px;
+    }
+
+    textarea {
+        height: 140px;
+        resize: vertical;
+    }
+
+    button {
+        width: 100%;
+        border: none;
+        padding: 14px;
+        border-radius: 25px;
+        background: #7b1e16;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #a52d1e;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+        background: #32120d;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .footer-logo {
+        color: #ffd166;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .social {
+        margin-top: 12px;
+    }
+
+    .social a {
+        color: white;
+        margin: 0 8px;
+        font-size: 20px;
+    }
+
+    .social a:hover {
+        color: #ffd166;
+    }
+
+    /* =========================
+       RESPONSIVE DESIGN
+    ========================== */
+
+    @media (max-width: 850px) {
+
+        header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav {
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+        }
+
+        .specials,
+        .values,
+        .contact-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .logo {
+            font-size: 25px;
+        }
+
+        nav a {
+            font-size: 14px;
+        }
+
+        .section {
+            padding: 55px 5%;
+        }
+
+        .section-title {
+            font-size: 32px;
+        }
+
+        .hero-content h1 {
+            font-size: 38px;
+        }
+
+        .hero-small {
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        .menu-item {
+            padding: 17px;
+        }
+
+        .menu-info h3 {
+            font-size: 17px;
+        }
+
+        .menu-info p {
+            font-size: 14px;
+        }
+
+        .price {
+            font-size: 17px;
+        }
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<!-- ==========================================
+     NAVIGATION
+=========================================== -->
+
+<header>
+
+```
+<div class="logo">
+    ☕ KishanCafe
+</div>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+</nav>
+```
+
+</header>
+
+<!-- ==========================================
+     HOME
+=========================================== -->
+
+<section id="home">
+
+```
+<div class="hero-content">
+
+    <div class="hero-small">
+        Authentic South Indian Café
+    </div>
+
+    <h1>
+        Welcome to KishanCafe
+    </h1>
+
+    <p>
+        Taste the traditional flavours of South India.
+        Fresh dosa, soft idli, delicious sambar and
+        aromatic filter coffee — all under one roof.
+    </p>
+
+    <a href="#menu" class="btn">
+        Explore Our Menu
+    </a>
+
+</div>
+```
+
+</section>
+
+<!-- ==========================================
+     SPECIALITIES
+=========================================== -->
+
+<section class="section">
+
+```
+<h2 class="section-title">
+    Our Specialities
+</h2>
+
+<p class="section-subtitle">
+    Enjoy authentic South Indian dishes made with
+    traditional recipes and fresh ingredients.
+</p>
+
+<div class="specials">
+
+    <div class="special-card">
+
+        <div class="food-icon">
+            🥞
+        </div>
+
+        <h3>
+            Masala Dosa
+        </h3>
+
+        <p>
+            Crispy golden dosa filled with delicious
+            spiced potato masala and served with
+            sambar and coconut chutney.
+        </p>
+
+    </div>
+
+
+    <div class="special-card">
+
+        <div class="food-icon">
+            🍛
+        </div>
+
+        <h3>
+            Idli & Sambar
+        </h3>
+
+        <p>
+            Soft steamed idlis served with hot,
+            flavourful sambar and fresh coconut chutney.
+        </p>
+
+    </div>
+
+
+    <div class="special-card">
+
+        <div class="food-icon">
+            ☕
+        </div>
+
+        <h3>
+            Filter Coffee
+        </h3>
+
+        <p>
+            Traditional South Indian filter coffee
+            prepared with rich coffee and creamy milk.
+        </p>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- ==========================================
+     ABOUT US
+=========================================== -->
+
+<section id="about" class="section">
+
+```
+<h2 class="section-title">
+    About KishanCafe
+</h2>
+
+<div class="about-content">
+
+    <h3>
+        Our Story
+    </h3>
+
+    <p>
+        KishanCafe was created with a simple idea —
+        to bring the authentic taste and warm hospitality
+        of South India to our customers.
+    </p>
+
+    <p>
+        Our menu is inspired by traditional South Indian
+        kitchens. From crispy dosas and fluffy idlis to
+        aromatic filter coffee, every dish is prepared
+        with carefully selected ingredients.
+    </p>
+
+
+    <h3>
+        Our Passion
+    </h3>
+
+    <p>
+        We believe food is more than just a meal.
+        It brings families and friends together.
+        At KishanCafe, we want every customer to enjoy
+        delicious food in a warm and comfortable atmosphere.
+    </p>
+
+
+    <div class="values">
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🌿
+            </div>
+
+            <h3>
+                Fresh Ingredients
+            </h3>
+
+            <p>
+                Fresh ingredients are carefully selected
+                for every dish.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                ❤️
+            </div>
+
+            <h3>
+                Made With Love
+            </h3>
+
+            <p>
+                Every recipe is prepared with care,
+                passion and attention to detail.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🌴
+            </div>
+
+            <h3>
+                Traditional Taste
+            </h3>
+
+            <p>
+                Authentic flavours inspired by
+                South Indian food culture.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- ==========================================
+     MENU
+=========================================== -->
+
+<section id="menu" class="section">
+
+```
+<h2 class="section-title">
+    Our Menu
+</h2>
+
+<p class="section-subtitle">
+    Delicious South Indian favourites prepared fresh
+    and served with traditional accompaniments.
+</p>
+
+
+<div class="menu-container">
+
+
+    <!-- DOSA -->
+
+    <div class="menu-category">
+
+        <h3 class="category-title">
+            🥞 Dosa Specials
+        </h3>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Plain Dosa
+                </h3>
+
+                <p>
+                    Crispy traditional dosa with sambar
+                    and coconut chutney.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹80
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Masala Dosa
+                </h3>
+
+                <p>
+                    Crispy dosa filled with spicy
+                    potato masala.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹110
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Mysore Masala Dosa
+                </h3>
+
+                <p>
+                    Spicy Mysore chutney with potato
+                    masala inside crispy dosa.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹130
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Cheese Dosa
+                </h3>
+
+                <p>
+                    Crispy dosa topped with melted cheese.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹140
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BREAKFAST -->
+
+    <div class="menu-category">
+
+        <h3 class="category-title">
+            🍛 South Indian Breakfast
+        </h3>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Idli Sambar
+                </h3>
+
+                <p>
+                    Soft steamed idlis with hot sambar
+                    and coconut chutney.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹70
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Medu Vada
+                </h3>
+
+                <p>
+                    Crispy lentil vada served with
+                    sambar and chutney.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹80
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Idli Vada Combo
+                </h3>
+
+                <p>
+                    Soft idli and crispy vada served
+                    together with chutney and sambar.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹100
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Ven Pongal
+                </h3>
+
+                <p>
+                    Traditional rice and lentil dish
+                    with spices and ghee.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹90
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- UTTAPAM -->
+
+    <div class="menu-category">
+
+        <h3 class="category-title">
+            🥗 Uttapam
+        </h3>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Plain Uttapam
+                </h3>
+
+                <p>
+                    Soft and fluffy traditional
+                    South Indian pancake.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹90
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Vegetable Uttapam
+                </h3>
+
+                <p>
+                    Topped with onion, tomato, capsicum
+                    and fresh vegetables.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹120
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Onion Uttapam
+                </h3>
+
+                <p>
+                    Soft uttapam topped with freshly
+                    sliced onions.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹110
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RICE -->
+
+    <div class="menu-category">
+
+        <h3 class="category-title">
+            🍚 Rice Specials
+        </h3>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Curd Rice
+                </h3>
+
+                <p>
+                    Creamy South Indian curd rice
+                    with traditional tempering.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹80
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Lemon Rice
+                </h3>
+
+                <p>
+                    Fragrant rice with lemon,
+                    peanuts and spices.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹80
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Sambar Rice
+                </h3>
+
+                <p>
+                    Rice cooked with delicious
+                    South Indian sambar.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹90
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BEVERAGES -->
+
+    <div class="menu-category">
+
+        <h3 class="category-title">
+            ☕ Beverages
+        </h3>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    South Indian Filter Coffee
+                </h3>
+
+                <p>
+                    Strong aromatic coffee with hot milk
+                    and traditional froth.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹50
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Masala Tea
+                </h3>
+
+                <p>
+                    Indian tea infused with aromatic spices.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹40
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="menu-info">
+
+                <h3>
+                    Fresh Lime Soda
+                </h3>
+
+                <p>
+                    Refreshing chilled lime soda.
+                </p>
+
+            </div>
+
+            <div class="price">
+                ₹60
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- ==========================================
+     CALL TO ACTION
+=========================================== -->
+
+<section class="cta">
+
+```
+<h2>
+    Taste the Tradition
+</h2>
+
+<p>
+    Come hungry. Leave happy.
+    Experience South India at KishanCafe.
+</p>
+
+<a href="#contact" class="btn">
+    Contact Us
+</a>
+```
+
+</section>
+
+<!-- ==========================================
+     CONTACT
+=========================================== -->
+
+<section id="contact" class="section">
+
+```
+<h2 class="section-title">
+    Contact Us
+</h2>
+
+<p class="section-subtitle">
+    Have a question or want to visit us?
+    Send us a message or use the information below.
+</p>
+
+
+<div class="contact-container">
+
+
+    <!-- CONTACT INFORMATION -->
+
+    <div class="contact-box">
+
+        <h2>
+            Visit KishanCafe
+        </h2>
+
+
+        <div class="contact-info">
+
+            <h3>
+                📍 Address
+            </h3>
+
+            <p>
+                123 South Indian Street,<br>
+                Your City, India
+            </p>
+
+        </div>
+
+
+        <div class="contact-info">
+
+            <h3>
+                📞 Phone
+            </h3>
+
+            <p>
+                +91 98765 43210
+            </p>
+
+        </div>
+
+
+        <div class="contact-info">
+
+            <h3>
+                ✉️ Email
+            </h3>
+
+            <p>
+                hello@kishancafe.com
+            </p>
+
+        </div>
+
+
+        <div class="contact-info">
+
+            <h3>
+                🕐 Opening Hours
+            </h3>
+
+            <p>
+                Monday - Sunday<br>
+                7:00 AM - 10:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTACT FORM -->
+
+    <div class="contact-box">
+
+        <h2>
+            Send Us a Message
+        </h2>
+
+        <form onsubmit="sendMessage(event)">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="Phone Number"
+            >
+
+            <textarea
+                placeholder="Write your message..."
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- ==========================================
+     FOOTER
+=========================================== -->
+
+<footer>
+
+```
+<div class="footer-logo">
+    ☕ KishanCafe
+</div>
+
+<p>
+    Authentic South Indian Café
+</p>
+
+<div class="social">
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">WhatsApp</a>
+</div>
+
+<br>
+
+<p>
+    © 2026 KishanCafe. All Rights Reserved.
+</p>
+```
+
+</footer>
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+
+<script>
+
+    function sendMessage(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Thank you for contacting KishanCafe! " +
+            "We will get back to you soon."
+        );
+
+        event.target.reset();
+    }
+
+</script>
+
+</body>
+</html>
